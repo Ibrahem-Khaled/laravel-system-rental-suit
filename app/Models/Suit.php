@@ -9,7 +9,7 @@ class Suit extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'image', 'price', 'color', 'gender', 'product_type', 'is_active'];
+    protected $fillable = ['name', 'description', 'image', 'price', 'color', 'type', 'product_type', 'is_active'];
 
     public function sizes()
     {
