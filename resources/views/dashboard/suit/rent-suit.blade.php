@@ -27,7 +27,7 @@
                     aria-controls="children" aria-selected="false">البدل الأطفال</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="sarieh-tab" data-toggle="tab" href="#sarieh" role="tab" aria-controls="sarieh"
+                <a class="nav-link" id="sarieh-tab" data-toggle="tab" href="#sarieh" role="tab" aria-controls="grooms_suit"
                     aria-selected="false">سواريه</a>
             </li>
             <li class="nav-item">
@@ -41,7 +41,7 @@
             <!-- تبويب البدلات الرجالية -->
             <div class="tab-pane fade show active" id="men" role="tabpanel" aria-labelledby="men-tab">
                 <div class="row">
-                    @foreach ($suits->where('gender', 'men') as $suit)
+                    @foreach ($suits->where('type', 'men') as $suit)
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
                                 <img src="{{ asset('storage/' . $suit->image) }}" class="card-img-top" alt="صورة البدلة"
@@ -73,7 +73,7 @@
             <!-- تبويب البدلات الأطفال -->
             <div class="tab-pane fade" id="children" role="tabpanel" aria-labelledby="children-tab">
                 <div class="row">
-                    @foreach ($suits->where('gender', 'children') as $suit)
+                    @foreach ($suits->where('type', 'children') as $suit)
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
                                 <img src="{{ asset('storage/' . $suit->image) }}" class="card-img-top" alt="صورة البدلة"
@@ -105,7 +105,7 @@
             <!-- تبويب السواريه -->
             <div class="tab-pane fade" id="sarieh" role="tabpanel" aria-labelledby="sarieh-tab">
                 <div class="row">
-                    @foreach ($suits->where('product_type', 'sarieh') as $suit)
+                    @foreach ($suits->where('type', 'grooms_suit') as $suit)
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
                                 <img src="{{ asset('storage/' . $suit->image) }}" class="card-img-top"
@@ -137,7 +137,7 @@
             <!-- تبويب الميكس -->
             <div class="tab-pane fade" id="mixed" role="tabpanel" aria-labelledby="mixed-tab">
                 <div class="row">
-                    @foreach ($suits->where('gender', 'mixed') as $suit)
+                    @foreach ($suits->where('type', 'mixed') as $suit)
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
                                 <img src="{{ asset('storage/' . $suit->image) }}" class="card-img-top" alt="صورة البدلة"
