@@ -67,7 +67,7 @@ class SuitController extends Controller
             $suit->image = $imagePath;
         }
 
-        $suit->update($request->only(['name', 'description', 'price', 'color', 'gender', 'product_type', 'is_active']));
+        $suit->update($request->only(['name', 'description', 'price', 'color', 'type', 'product_type', 'is_active']));
 
         return redirect()->back()->with('success', 'تم تعديل البدلة بنجاح');
     }
