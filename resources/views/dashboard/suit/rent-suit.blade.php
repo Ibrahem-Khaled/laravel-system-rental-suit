@@ -12,8 +12,8 @@
                     aria-selected="true">البدل الرجالية</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="children-tab" data-toggle="tab" href="#children" role="tab" aria-controls="children"
-                    aria-selected="false">البدل الأطفال</a>
+                <a class="nav-link" id="children-tab" data-toggle="tab" href="#children" role="tab"
+                    aria-controls="children" aria-selected="false">البدل الأطفال</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="sarieh-tab" data-toggle="tab" href="#sarieh" role="tab" aria-controls="sarieh"
@@ -97,8 +97,8 @@
                     @foreach ($suits->where('product_type', 'sarieh') as $suit)
                         <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
-                                <img src="{{ asset('storage/' . $suit->image) }}" class="card-img-top" alt="صورة السواريه"
-                                    style="height: 250px; object-fit: cover;">
+                                <img src="{{ asset('storage/' . $suit->image) }}" class="card-img-top"
+                                    alt="صورة السواريه" style="height: 250px; object-fit: cover;">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $suit->name }}</h5>
                                     <div class="d-flex justify-content-between align-items-center">
@@ -189,10 +189,11 @@
                         </div>
                         <div class="form-group">
                             <label for="gender">النوع</label>
-                            <select name="gender" class="form-control">
+                            <select name="type" class="form-control">
                                 <option value="men">رجال</option>
                                 <option value="children">أطفال</option>
                                 <option value="mixed">مختلط</option>
+                                <option value="grooms_suit">سواريه (بدلة عريس)</option> <!-- إضافة سواريه -->
                             </select>
                         </div>
                         <div class="form-group">
@@ -201,7 +202,6 @@
                                 <option value="shirts">قمصان</option>
                                 <option value="pants">سراويل</option>
                                 <option value="suits">بدلات</option>
-                                <option value="sarieh">سواريه</option> <!-- إضافة سواريه -->
                             </select>
                         </div>
                         <div class="form-group">

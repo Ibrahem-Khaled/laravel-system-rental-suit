@@ -13,14 +13,14 @@
     <div class="collapse navbar-collapse w-auto " id="sidenav-collapse-main">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-white" href="{{ route('home') }}">
+                <a class="nav-link text-white" href="{{ route('suits.index') }}">
                     <i class="fas fa-home me-2"></i>
                     <span class="nav-link-text ms-1">الرئيسية</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="{{ route('suits.index') }}">
-                    <i class="fas fa-tshirt me-2"></i>
+                <a class="nav-link text-white" href="{{ route('home') }}">
+                    <i class="fas fa-store me-2"></i>
                     <span class="nav-link-text ms-1">المحل</span>
                 </a>
             </li>
