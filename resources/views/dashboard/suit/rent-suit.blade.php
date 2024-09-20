@@ -189,7 +189,7 @@
                         </div>
                         <div class="form-group">
                             <label for="gender">النوع</label>
-                            <select name="type" class="form-control">
+                            <select name="gender" class="form-control">
                                 <option value="men">رجال</option>
                                 <option value="children">أطفال</option>
                                 <option value="mixed">مختلط</option>

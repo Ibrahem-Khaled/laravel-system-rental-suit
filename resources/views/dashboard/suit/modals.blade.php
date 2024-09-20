@@ -38,6 +38,8 @@
                             <option value="men" {{ $suit->gender == 'men' ? 'selected' : '' }}>رجال</option>
                             <option value="children" {{ $suit->gender == 'children' ? 'selected' : '' }}>أطفال</option>
                             <option value="mixed" {{ $suit->gender == 'mixed' ? 'selected' : '' }}>مختلط</option>
+                            <option value="grooms_suit" {{ $suit->gender == 'grooms_suit' ? 'selected' : '' }}>سواريه
+                                (بدلة عريس)</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -121,9 +123,11 @@
                         <label for="sizes">المقاسات (مفصولة بفاصلة)</label>
                         <div id="sizeInputs{{ $suit->id }}">
                             <div class="input-group mb-2">
-                                <input type="text" name="sizes[]" class="form-control" placeholder="مثال: S, M, L, XL">
+                                <input type="text" name="sizes[]" class="form-control"
+                                    placeholder="مثال: S, M, L, XL">
                                 <div class="input-group-append">
-                                    <button type="button" class="btn btn-success" onclick="addSizeInput({{ $suit->id }})">
+                                    <button type="button" class="btn btn-success"
+                                        onclick="addSizeInput({{ $suit->id }})">
                                         <i class="fas fa-plus"></i>
                                     </button>
                                 </div>
@@ -159,4 +163,3 @@
         button.closest('.input-group').remove();
     }
 </script>
-

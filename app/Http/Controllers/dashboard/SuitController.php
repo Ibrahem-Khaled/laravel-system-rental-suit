@@ -40,7 +40,7 @@ class SuitController extends Controller
             'description' => $request->description,
             'price' => $request->price,
             'color' => $request->color,
-            'gender' => $request->gender,
+            'type' => $request->gender,
             'product_type' => $request->product_type,
             'is_active' => $request->is_active,
             'image' => $imagePath,
